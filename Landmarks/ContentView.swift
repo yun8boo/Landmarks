@@ -1,16 +1,22 @@
-//
-//  ContentView.swift
-//  Landmarks
-//
-//  Created by 渡辺悠真 on 2021/09/19.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            MapView().frame(height: 300)
+            CircleImage()
+            VStack(alignment: .leading) {
+                Text("Turtle Rock")
+                    .font(.title)
+                HStack {
+                    Text("Joshua Tree National Park")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("California")
+                        .font(.subheadline)
+                }
+            }.padding()
+        }
     }
 }
 
